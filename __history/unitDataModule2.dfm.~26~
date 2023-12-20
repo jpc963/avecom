@@ -13,8 +13,6 @@ object dm: Tdm
   end
   object TableClientes: TFDTable
     Active = True
-    AfterPost = TableClientesAfterPost
-    AfterDelete = TableClientesAfterDelete
     IndexFieldNames = 'id'
     Connection = DBConexao
     ResourceOptions.AssignedValues = [rvEscapeExpand]
@@ -53,6 +51,8 @@ object dm: Tdm
   object SqlClientesAtivos: TFDQuery
     Active = True
     Connection = DBConexao
+    UpdateOptions.AssignedValues = [uvRefreshMode]
+    UpdateOptions.RefreshMode = rmAll
     SQL.Strings = (
       'SELECT * FROM clientes WHERE ativo = 1')
     Left = 464
@@ -61,6 +61,8 @@ object dm: Tdm
   object SqlClientesInativos: TFDQuery
     Active = True
     Connection = DBConexao
+    UpdateOptions.AssignedValues = [uvRefreshMode]
+    UpdateOptions.RefreshMode = rmAll
     SQL.Strings = (
       'SELECT * FROM clientes WHERE ativo = 0')
     Left = 464

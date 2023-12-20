@@ -121,6 +121,8 @@ procedure TFormMain.BtnSalvarClick( Sender: TObject );
     begin
         HabilitarBotoes;
         dm.TableClientes.Post;
+        dm.SqlClientesAtivos.Refresh;
+        dm.SqlClientesInativos.Refresh;
         MessageDlg( 'Registro salvo com sucesso', mtConfirmation, [ mbOk ], 0 );
     end;
 

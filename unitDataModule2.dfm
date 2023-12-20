@@ -49,18 +49,18 @@ object dm: Tdm
     Top = 88
   end
   object SqlClientesAtivos: TFDQuery
+    Active = True
     Connection = DBConexao
     UpdateOptions.AssignedValues = [uvRefreshMode]
-    UpdateOptions.RefreshMode = rmAll
     SQL.Strings = (
       'SELECT * FROM clientes WHERE ativo = 1')
     Left = 464
     Top = 24
   end
   object SqlClientesInativos: TFDQuery
+    Active = True
     Connection = DBConexao
     UpdateOptions.AssignedValues = [uvRefreshMode]
-    UpdateOptions.RefreshMode = rmAll
     SQL.Strings = (
       'SELECT * FROM clientes WHERE ativo = 0')
     Left = 464
