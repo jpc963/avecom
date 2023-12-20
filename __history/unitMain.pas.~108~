@@ -57,7 +57,7 @@ implementation
 
 {$R *.dfm}
 
-uses unitDataModule2, unitNovoCliente;
+uses unitDataModule2, unitNovoCliente, unitImpressao;
 
 procedure TFormMain.BtnConsultarClick( Sender: TObject );
     begin
@@ -112,15 +112,8 @@ procedure TFormMain.BtnExcluirClick( Sender: TObject );
     end;
 
 procedure TFormMain.BtnImprimirClick( Sender: TObject );
-
     begin
-        case MessageDlg( 'Qual filtro deseja aplicar?', mtCustom,
-          [mbOk, mbOk, mbOk], 0, mbOk, [ 'Todos', 'Ativos', 'Inativos' ] ) of
-            mrOk:
-
-                ShowMessage( 'teste' );
-        end;
-
+        FormImpressao.ShowModal;
     end;
 
 procedure TFormMain.BtnSalvarClick( Sender: TObject );

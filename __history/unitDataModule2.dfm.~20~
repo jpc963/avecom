@@ -1,4 +1,4 @@
-object DataModule2: TDataModule2
+object dm: Tdm
   Height = 768
   Width = 1097
   object DBConexao: TFDConnection
@@ -50,6 +50,7 @@ object DataModule2: TDataModule2
   end
   object SqlClientesAtivos: TFDQuery
     Active = True
+    CachedUpdates = True
     Connection = DBConexao
     SQL.Strings = (
       'SELECT * FROM clientes WHERE ativo = 1')
@@ -57,10 +58,24 @@ object DataModule2: TDataModule2
     Top = 24
   end
   object SqlClientesInativos: TFDQuery
+    Active = True
+    CachedUpdates = True
     Connection = DBConexao
     SQL.Strings = (
       'SELECT * FROM clientes WHERE ativo = 0')
     Left = 464
+    Top = 96
+  end
+  object DataSourceClientesAtivos: TDataSource
+    DataSet = SqlClientesAtivos
+    OnDataChange = DataSourceClientesAtivosDataChange
+    Left = 600
+    Top = 24
+  end
+  object DataSourceClientesInativos: TDataSource
+    DataSet = SqlClientesInativos
+    OnDataChange = DataSourceClientesInativosDataChange
+    Left = 600
     Top = 96
   end
 end

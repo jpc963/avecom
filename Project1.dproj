@@ -133,10 +133,6 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="unitNovoCliente.pas">
-            <Form>FormNovoCliente</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="unitImpressao.pas">
             <Form>FormImpressao</Form>
             <FormType>dfm</FormType>

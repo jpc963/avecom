@@ -1,4 +1,4 @@
-object DataModule2: TDataModule2
+object dm: Tdm
   Height = 768
   Width = 1097
   object DBConexao: TFDConnection
@@ -25,11 +25,6 @@ object DataModule2: TDataModule2
       ProviderFlags = [pfInWhere, pfInKey]
       ReadOnly = False
     end
-    object TableClientescodigo: TIntegerField
-      FieldName = 'codigo'
-      Origin = 'codigo'
-      Required = True
-    end
     object TableClientesnome: TStringField
       FieldName = 'nome'
       Origin = 'nome'
@@ -52,5 +47,31 @@ object DataModule2: TDataModule2
     DataSet = TableClientes
     Left = 144
     Top = 88
+  end
+  object SqlClientesAtivos: TFDQuery
+    Active = True
+    Connection = DBConexao
+    SQL.Strings = (
+      'SELECT * FROM clientes WHERE ativo = 1')
+    Left = 464
+    Top = 24
+  end
+  object SqlClientesInativos: TFDQuery
+    Active = True
+    Connection = DBConexao
+    SQL.Strings = (
+      'SELECT * FROM clientes WHERE ativo = 0')
+    Left = 464
+    Top = 96
+  end
+  object DataSourceClientesAtivos: TDataSource
+    DataSet = SqlClientesAtivos
+    Left = 600
+    Top = 24
+  end
+  object DataSourceClientesInativos: TDataSource
+    DataSet = SqlClientesInativos
+    Left = 600
+    Top = 96
   end
 end

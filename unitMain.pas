@@ -113,6 +113,7 @@ procedure TFormMain.BtnExcluirClick( Sender: TObject );
 
 procedure TFormMain.BtnImprimirClick( Sender: TObject );
     begin
+        DBTabela.Refresh;
         FormImpressao.ShowModal;
     end;
 

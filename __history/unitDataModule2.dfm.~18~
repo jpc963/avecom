@@ -1,4 +1,4 @@
-object DataModule2: TDataModule2
+object dm: Tdm
   Height = 768
   Width = 1097
   object DBConexao: TFDConnection
