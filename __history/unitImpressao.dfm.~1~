@@ -1,0 +1,54 @@
+object FormImpressao: TFormImpressao
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Imprimir'
+  ClientHeight = 174
+  ClientWidth = 491
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  TextHeight = 15
+  object LabelMensagem: TLabel
+    Left = 97
+    Top = 44
+    Width = 298
+    Height = 21
+    Caption = 'Qual filtro deseja aplicar para a impress'#227'o?'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object BtnFiltroAtivos: TButton
+    Left = 208
+    Top = 104
+    Width = 75
+    Height = 25
+    Caption = 'Ativos'
+    TabOrder = 0
+  end
+  object BtnFiltroInativos: TButton
+    Left = 304
+    Top = 104
+    Width = 75
+    Height = 25
+    Caption = 'Inativos'
+    TabOrder = 1
+  end
+  object BtnFiltroTodos: TButton
+    Left = 112
+    Top = 104
+    Width = 75
+    Height = 25
+    Caption = 'Todos'
+    TabOrder = 2
+  end
+end

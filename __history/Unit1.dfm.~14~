@@ -1,0 +1,167 @@
+object Form1: TForm1
+  AlignWithMargins = True
+  Left = 0
+  Top = 0
+  Anchors = [akLeft, akTop, akRight, akBottom]
+  AutoSize = True
+  Caption = 'Cadastro de Clientes'
+  ClientHeight = 404
+  ClientWidth = 443
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object LabelNome: TLabel
+    Left = 0
+    Top = 41
+    Width = 51
+    Height = 23
+    Caption = 'Nome:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object LabelAtivo: TLabel
+    Left = 0
+    Top = 120
+    Width = 43
+    Height = 23
+    Caption = 'Ativo:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object LabelCodigo: TLabel
+    Left = 0
+    Top = 0
+    Width = 59
+    Height = 23
+    Caption = 'C'#243'digo:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object LabelEndereco: TLabel
+    Left = 0
+    Top = 81
+    Width = 75
+    Height = 23
+    Caption = 'Endere'#231'o:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object InputCodigo: TEdit
+    Left = 88
+    Top = 0
+    Width = 217
+    Height = 24
+    NumbersOnly = True
+    TabOrder = 0
+  end
+  object BtnPesquisar: TButton
+    Left = 311
+    Top = 0
+    Width = 132
+    Height = 25
+    Caption = 'Consultar'
+    TabOrder = 1
+    OnClick = BtnPesquisarClick
+  end
+  object BtnNovo: TButton
+    Left = 368
+    Top = 40
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 2
+  end
+  object BtnAtualizar: TButton
+    Left = 368
+    Top = 80
+    Width = 75
+    Height = 25
+    Caption = 'Alterar'
+    TabOrder = 3
+  end
+  object BtnExcluir: TButton
+    Left = 368
+    Top = 120
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 4
+  end
+  object DBTabela: TDBGrid
+    Left = 0
+    Top = 164
+    Width = 443
+    Height = 209
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+  end
+  object DBNavigator: TDBNavigator
+    Left = 0
+    Top = 379
+    Width = 336
+    Height = 25
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    TabOrder = 6
+  end
+  object DBInputNome: TDBEdit
+    Left = 88
+    Top = 40
+    Width = 274
+    Height = 24
+    TabOrder = 7
+  end
+  object DBInputEndereco: TDBEdit
+    Left = 88
+    Top = 80
+    Width = 274
+    Height = 24
+    TabOrder = 8
+  end
+  object CheckAtivo: TDBCheckBox
+    Left = 88
+    Top = 125
+    Width = 17
+    Height = 17
+    TabOrder = 9
+  end
+  object BtnImprimir: TButton
+    Left = 240
+    Top = 120
+    Width = 122
+    Height = 25
+    Caption = 'Imprimir'
+    TabOrder = 10
+  end
+  object BtnSair: TButton
+    Left = 344
+    Top = 379
+    Width = 99
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 11
+  end
+end

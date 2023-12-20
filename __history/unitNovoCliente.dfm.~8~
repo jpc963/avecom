@@ -1,0 +1,98 @@
+object FormNovoCliente: TFormNovoCliente
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Novo Cliente'
+  ClientHeight = 397
+  ClientWidth = 316
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  TextHeight = 15
+  object LabelNome: TLabel
+    Left = 19
+    Top = 56
+    Width = 54
+    Height = 23
+    Caption = 'Nome:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object LabelAtivo: TLabel
+    Left = 19
+    Top = 200
+    Width = 46
+    Height = 23
+    Caption = 'Ativo:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object LabelEndereco: TLabel
+    Left = 19
+    Top = 127
+    Width = 78
+    Height = 23
+    Caption = 'Endere'#231'o:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object DBInputEndereco: TDBEdit
+    Left = 19
+    Top = 156
+    Width = 267
+    Height = 26
+    DataField = 'endereco'
+    DataSource = DataModule2.DataSourceClientes
+    TabOrder = 0
+  end
+  object CheckAtivo: TDBCheckBox
+    Left = 76
+    Top = 203
+    Width = 21
+    Height = 18
+    DataField = 'ativo'
+    DataSource = DataModule2.DataSourceClientes
+    TabOrder = 1
+  end
+  object DBInputNome2: TDBEdit
+    Left = 19
+    Top = 85
+    Width = 267
+    Height = 26
+    DataField = 'nome'
+    DataSource = DataModule2.DataSourceClientes
+    TabOrder = 2
+  end
+  object BtnConcluido: TButton
+    Left = 41
+    Top = 272
+    Width = 232
+    Height = 33
+    Caption = 'Conclu'#237'do'
+    TabOrder = 3
+  end
+  object BtnCancelar: TButton
+    Left = 41
+    Top = 317
+    Width = 232
+    Height = 33
+    Caption = 'Cancelar'
+    TabOrder = 4
+  end
+end

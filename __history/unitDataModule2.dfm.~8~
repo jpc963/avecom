@@ -1,0 +1,54 @@
+object DataModule2: TDataModule2
+  Height = 768
+  Width = 1097
+  object DBConexao: TFDConnection
+    Params.Strings = (
+      'Database=cadastros'
+      'User_Name=root'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 48
+    Top = 24
+  end
+  object TableClientes: TFDTable
+    IndexFieldNames = 'id'
+    Connection = DBConexao
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'cadastros.clientes'
+    Left = 144
+    Top = 24
+    object TableClientesid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ReadOnly = False
+    end
+    object TableClientescodigo: TIntegerField
+      FieldName = 'codigo'
+      Origin = 'codigo'
+      Required = True
+    end
+    object TableClientesnome: TMemoField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Required = True
+      BlobType = ftMemo
+    end
+    object TableClientesendereco: TMemoField
+      FieldName = 'endereco'
+      Origin = 'endereco'
+      Required = True
+      BlobType = ftMemo
+    end
+    object TableClientesativo: TBooleanField
+      FieldName = 'ativo'
+      Origin = 'ativo'
+      Required = True
+    end
+  end
+  object DataSourceClientes: TDataSource
+    DataSet = TableClientes
+    Left = 144
+    Top = 88
+  end
+end

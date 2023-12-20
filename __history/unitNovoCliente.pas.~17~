@@ -1,0 +1,41 @@
+unit unitNovoCliente;
+
+interface
+
+uses
+    Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+    System.Classes, Vcl.Graphics,
+    Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.Mask,
+    Vcl.ExtCtrls;
+
+type
+    TFormNovoCliente = class( TForm )
+        LabelNome: TLabel;
+        LabelAtivo: TLabel;
+        LabelEndereco: TLabel;
+        DBInputEndereco2: TDBEdit;
+        CheckAtivo2: TDBCheckBox;
+        DBInputNome2: TDBEdit;
+        BtnConcluido: TButton;
+        BtnCancelar: TButton;
+        procedure FormActivate( Sender: TObject );
+        private
+            { Private declarations }
+        public
+            { Public declarations }
+    end;
+
+var
+    FormNovoCliente: TFormNovoCliente;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormNovoCliente.FormActivate( Sender: TObject );
+    begin
+        DBInputNome2.Field.Clear;
+        DBInputEndereco2.Field.Clear
+    end;
+
+end.
